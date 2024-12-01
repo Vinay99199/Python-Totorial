@@ -1,0 +1,11 @@
+print()
+def num_pattern(n):
+    for i in range(1,n):
+        for j in range(1,n):
+            if j==1 or j==2 or j==3 or j==n-1 or i==1 or i==n-1 :
+                print("*",end=" ")
+            else:
+                 print(" ",end=" ")
+        print()
+           
+num_pattern(9)

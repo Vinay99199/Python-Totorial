@@ -1,0 +1,197 @@
+# These are examples of all List function------------------------
+
+list=[1,2,3,4,5,6,7]
+list.append([8])
+print(list)      #[1, 2, 3, 4, 5, 6, 7, [8]]
+print()    #print() means next line
+
+lis=[1,2,3,4,5,6]
+print(lis.copy())      #[1, 2, 3, 4, 5, 6]
+print()
+
+li=["ram",5,6,7]
+li.insert(3,9)
+print(li)        #['ram', 5, 6, 9, 7]
+print()
+
+a=[7, 6, 5, 4, 3, 2, 1]
+a.reverse()
+print(a)             #[1, 2, 3, 4, 5, 6, 7]
+print()
+
+b=[7, 6, 5, 4, 3, 2, 1]
+a.clear()
+print(a)          #[]
+print()
+
+c=[7, 6, 5,1, 4, 3, 2, ]
+print(min(c))          #1
+print()
+
+d=[7, 6, 5, 4, 20,3, 2, 1]
+print(max(d))            #20
+
+e=["raman", "ram", 2, 1]
+print(e.index(1))        #3
+print()
+
+f=[7, 6, "ram", 2, 1]
+f.pop(0)
+print(f)         #[6, 'ram', 2, 1]
+print()
+
+g=[7, 6, "ram", 2,7, 1]
+g.remove(7)
+print(g)       #[6, 'ram', 2, 7, 1]
+print()
+
+h=[ 'a','b','k','d','e']
+h.sort()
+print(h)        #['a', 'b', 'd', 'e', 'k']
+print()
+
+#These are example of List COMPREHENSION ---------------------------------
+a=[1,2,23,7,5]
+b=[x**3 for x in a]
+print(b)            #[1, 8, 12167, 343, 125]
+print()
+
+d=[1,2,3,7,4]
+e=[x**3 for x in d if x%2==0]
+print(e)            #[8, 64]
+print() 
+
+#These are example of List indexing---------------------------------------
+x=["ram","boy","rat"]
+print(x[2])           #rat
+print()
+
+y=["ram","boy","rat"]
+print(y[-2])          #boy
+print()
+
+#These are example of List Slicing---------------------------
+z=[11,21,31,24,63,81,45,12]
+print("Before Slicing:  ",z)
+print("after sliced: ",z[1:6:1])  #[start,stop,step]
+print("after sliced: ",z[::2])    #[start=0,stop=7,step=2]
+print("after sliced: ",z[::])     #[start=0,stop=7,step=1]
+
+
+
+
+#These are example of Tuple----------------------
+a=(1,'Hello',5)
+b=("hello")
+print(a)       #(1, 'Hello', 5)
+print(type(a))  #<class 'tuple'>
+print(type(b))  #<class 'str'>
+print("\n")       #print("\n") means next line
+
+b=("Cat","Dog","Boy","Girl")
+c=(1,2,"rat",4,"bye")
+print(b)
+print("value in b[0] =",b[0])
+print("value in b[1] =",b[1])
+print("value in b[2] =",b[2])
+print("value in b[3] =",b[3])
+print("value in b[-1]",b[-1])
+print("value in c[-1]",c[-1])
+print("value in c[21]",c[2])
+print("\n")
+
+#These are example of Dictionary----------------------
+Dict={}
+print(Dict)
+Dict[0]="are"
+Dict[1]={"coding",'good',"7",3,6,"abc"}
+Dict[3]="are"
+Dict["are"]="Yahoo"
+print(Dict["are"])
+print(Dict)
+print(type(Dict))
+print("\n")
+
+
+
+#python Dictionary method---------------------
+text={0,"ram",4,5,"rat"}
+text.clear()
+print(text)   #set()
+print("\n")
+
+text1={1,"ram","boy",5,"rat"}
+text1.copy()
+print(text1)   #{1, 'ram','boy', 5, 'rat'}
+print("\n")
+
+text2={2,"ram",4,5,"rat"}
+res_dict=dict.fromkeys(text2)
+print("The new created dict.with None values:"+str(res_dict))  
+res_dict2=dict.fromkeys(text2,1)   #The new created dict.with None values:{2: None, 4: None, 5: None, 'ram': None, 'rat': None}
+
+print("the newly created dict with 1 as value :"+str(res_dict2))  #the newly created dict with 1 as value :{2: 1, 4: 1, 5: 1, 'ram': 1, 'rat': 1}
+print("\n")
+
+d={"coding":"good","thinking":"better"}
+print(d.get("coding"))  #good
+print("\n")
+
+stu={"rahul":1,"vinay":3,"ram":7}
+print(stu)     #{'rahul': 1, 'vinay': 3, 'ram': 7}
+suspended=stu.pop("vinay")
+print("suspended student roll no.=",suspended)  #suspended student roll no.= 3
+print("remaining student",stu)   #remaining student {'rahul': 1, 'ram': 7}
+print("\n")
+
+d1={"A":"cat", "B":"dog", "c":"girl"}
+print(d1.keys())    #dict_keys(['A', 'B', 'c'])
+print("\n")
+
+d2={"a":1,"b":2,"c":4}
+print("setdefault() returned:",d2.setdefault('b',6))  #setdefault() returned: 2
+print("After using setdefault():",d2)     #After using setdefault(): {'a': 1, 'b': 2, 'c': 4}
+print("\n")
+
+d3={'a':2,'b':5,'c':6}
+d3.setdefault(" ",7)
+print(d3)         #{'a': 2, 'b': 5, 'c': 6, ' ': 7}
+print("\n")
+
+d4={'a':3,'b':4,'c':8}
+print(d4.values())     #dict_values([3, 4, 8])
+print("\n")
+
+d5={"a":10,"b":37,"c":84}
+d6={"a":10}
+print("before updation:",d5)   #before updation: {'a': 10, 'b': 37, 'c': 84}
+d6.update(d5)
+print("after updation:",d5)   #after updation: {'a': 10, 'b': 37, 'c': 84}
+print("\n")
+
+#String--------------------------------------
+s5="kanpur"
+print(s5)              #Kanpur
+print(s5.capitalize())     #Kanpur
+print("\n")
+
+mystring="kanpaura"
+char_count=mystring.count('a')
+print(char_count)           #3
+print("\n")
+
+a="Lucknow"
+print(a.isalpha())    #True
+print("hellow".islower())   #True 
+print(a.endswith("ow"))    #True
+
+
+
+
+
+
+
+
+
+
+
